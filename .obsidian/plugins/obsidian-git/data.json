@@ -1,5 +1,5 @@
 {
-  "commitMessage": "HP Pavilion 14 backup: {{date}}",
+  "commitMessage": "{{hostname}} backup: {{date}}",
   "autoCommitMessage": "vault backup: {{date}}",
   "commitMessageScript": "",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
