@@ -1,0 +1,8 @@
+{
+  "cssTheme": "Vanilla AMOLED Color",
+  "interfaceFontFamily": "JetBrains Mono",
+  "textFontFamily": "JetBrains Mono",
+  "enabledCssSnippets": [
+    "Iterative Rainbow Folder Titles"
+  ]
+}

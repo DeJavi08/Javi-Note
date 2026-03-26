@@ -1,0 +1,83 @@
+/* Iterative Rainbow Folder Titles - Fixed Version
+   Berdasarkan sistem CyanVoxel & Lithou 
+*/
+
+:root {
+    /* Definisi warna folder */
+    --Fold0: #b9c0c7;
+    --Fold1: #cda485;
+    --Fold2: #d399cf;
+    --Fold3: #aaa5db;
+    --Fold4: #8ab6e2;
+    --Fold5: #9dcd78;
+    --Fold6: #f1ca5d;
+    --Fold7: #f0ae59;
+    --Fold8: #f39b9b;
+    --Fold9: #d32f2f;
+
+    
+    /* Warna teks aktif (saat file diklik) */
+    --FoldTextActive: #ffffff; 
+}
+
+/* 1. Pengaturan Dasar Sidebar */
+.nav-files-container {
+    margin: 0px 5px;
+}
+
+/* Judul Folder Utama agar lebih menonjol seperti di video */
+.nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 8px;
+    padding-left: 24px;
+}
+
+/* 2. Logika Warna Iteratif (Warna-warni berulang setiap 9 folder) */
+
+/* Warna Folder */
+.nav-folder:nth-child(9n+1) > .nav-folder-title { color: var(--Fold0) !important; }
+.nav-folder:nth-child(9n+2) > .nav-folder-title { color: var(--Fold1) !important; }
+.nav-folder:nth-child(9n+3) > .nav-folder-title { color: var(--Fold2) !important; }
+.nav-folder:nth-child(9n+4) > .nav-folder-title { color: var(--Fold3) !important; }
+.nav-folder:nth-child(9n+5) > .nav-folder-title { color: var(--Fold4) !important; }
+.nav-folder:nth-child(9n+6) > .nav-folder-title { color: var(--Fold5) !important; }
+.nav-folder:nth-child(9n+7) > .nav-folder-title { color: var(--Fold6) !important; }
+.nav-folder:nth-child(9n+8) > .nav-folder-title { color: var(--Fold7) !important; }
+.nav-folder:nth-child(9n+9) > .nav-folder-title { color: var(--Fold8) !important; }
+
+/* Warna File di dalam folder tersebut agar senada */
+.nav-folder:nth-child(9n+1) .nav-file-title { color: var(--Fold0); }
+.nav-folder:nth-child(9n+2) .nav-file-title { color: var(--Fold1); }
+.nav-folder:nth-child(9n+3) .nav-file-title { color: var(--Fold2); }
+.nav-folder:nth-child(9n+4) .nav-file-title { color: var(--Fold3); }
+.nav-folder:nth-child(9n+5) .nav-file-title { color: var(--Fold4); }
+.nav-folder:nth-child(9n+6) .nav-file-title { color: var(--Fold5); }
+.nav-folder:nth-child(9n+7) .nav-file-title { color: var(--Fold6); }
+.nav-folder:nth-child(9n+8) .nav-file-title { color: var(--Fold7); }
+.nav-folder:nth-child(9n+9) .nav-file-title { color: var(--Fold8); }
+
+/* Warna Ikon Panah Collapse */
+.nav-folder:nth-child(9n+1) .nav-folder-collapse-indicator { color: var(--Fold0); }
+.nav-folder:nth-child(9n+2) .nav-folder-collapse-indicator { color: var(--Fold1); }
+.nav-folder:nth-child(9n+3) .nav-folder-collapse-indicator { color: var(--Fold2); }
+
+/* 3. Pengaturan Saat File Aktif/Dipilih */
+.nav-file-title.is-active {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* 4. Pembersihan Kode Blue Topaz yang bermasalah */
+.nav-file-title, .nav-folder-title {
+    font-family: 'JetBrains Mono', monospace; /* Menggunakan font yang kamu download tadi */
+    line-height: 1.5;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/* Hapus paksa warna default/abu-abu agar warna pelangi muncul */
+.nav-file-title-content, .nav-folder-title-content {
+    color: inherit !important;
+}
